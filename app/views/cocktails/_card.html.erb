@@ -1,13 +1,17 @@
-<div class="card-cocktail">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-cocktail-infos">
-      <% @cocktails.each do |cocktail| %>
-              <div class="col-xs-12 col-sm-4">
-                  <div class="card-category"><%= cocktail.name %></div>
-                  <div class="card-description">
-                    <p><%= link_to 'View Recipe', cocktail, class: 'card-link btn btn-primary' %></p>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-          </div>
+<div class="container">
+<div class="row ">
+<div class="card-deck ">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card">
+
+    <img class="card-img-top" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <p class="card-text"><%= link_to 'View Recipe', cocktail, class: 'card-link btn btn-primary' %></p>
+       </div>
+    </div>
+  <% end %>
+</div>
+
+</div>
+</div>
