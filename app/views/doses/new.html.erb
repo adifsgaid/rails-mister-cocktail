@@ -1,0 +1,21 @@
+<div class="form-wrapper">
+  <div class="form-container">
+    <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :description %>
+      </div>
+
+      <div class="form-inputs">
+         <%= f.label :ingredient %><br>
+        <%= f.collection_select :ingredient_id, @ingredients, :id, :name %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
+     <br>
+  </div>
+</div>
