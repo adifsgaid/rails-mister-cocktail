@@ -24,11 +24,14 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
-    @cocktail = Cocktail.new(cocktail_params)
+    if params[:photo].nil?
+      params[:photo] = 'https://source.unsplash.com/500x400/?cocktail'
+    end
+       @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      redirect :new
     end
     # respond_to do |format|
     #   if @cocktail.save
