@@ -9,7 +9,6 @@
 <div class="container">
   <div class="cards">
     <% @cocktails.each do |cocktail|  %>
-    <% image_url = 'https://source.unsplash.com/500x400/?cocktail'%>
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%=cl_image_tag cocktail.photo.key%>');">
             <h2><%= cocktail.name %></h2>
           <%= link_to "See Ingredient", cocktail_path(cocktail), class: 'card-link' %>
