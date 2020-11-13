@@ -23,3 +23,9 @@ list.each do |i|
 end
 
 p "#{Ingredient.count} added!"
+
+# je intancies Ingredient.new unn ingredient
+# ouvre L'api and parse avec le nomde l'ingredient
+# recupere URL photo as
+# associe mon photo avec instance
+# sauvegarde mon instance
