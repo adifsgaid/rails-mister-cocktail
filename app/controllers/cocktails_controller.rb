@@ -24,24 +24,13 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
-    if params[:photo].nil?
-      params[:photo] = 'https://source.unsplash.com/500x400/?cocktail'
-    end
-       @cocktail = Cocktail.new(cocktail_params)
+    @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
+      @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
       render :new
     end
-    # respond_to do |format|
-    #   if @cocktail.save
-    #     format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }
-    #     format.json { render :show, status: :created, location: @cocktail }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @cocktail.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
   private
