@@ -12,6 +12,7 @@ class CocktailsController < ApplicationController
     @doses = @cocktail.doses
   end
   # GET /cocktails/new
+
   def new
     @cocktail = Cocktail.new
   end
