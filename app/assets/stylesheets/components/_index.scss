@@ -2,6 +2,9 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "footer";
+
+@import "form";
 .banner {
   background-size: cover;
   background-position: center;
@@ -21,4 +24,10 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+a {
+    padding-top: 10px;
+    color: #f8f9fa;
+    text-decoration: none;
+    background-color: transparent;
 }

@@ -1,10 +1,18 @@
 // Specific CSS for your home-page
-
+.navbar-lewagon{
+  height: 55px;
+}
+ .navbar-lewagon .navbar-brand img {
+    width:190px;
+}
+#content{
+  min-height: calc(100vh - 101px);
+}
 
 .card {
   background-size: cover;
   background-position: center;
-  height: 150px;
+  height: 235px;
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   display: flex;

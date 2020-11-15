@@ -1,13 +1,4 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
 
-
-.navbar-lewagon{
-  height: 55px;
-}
- .navbar-lewagon .navbar-brand img {
-    width:190px;
-}
-#content{
-  min-height: calc(100vh - 101px);
-}
